@@ -1,0 +1,83 @@
+.mediaRow
+{
+	position: relative;
+	width: 100%;
+	height: 20rem;
+	margin-bottom: 10px;
+	max-height: 200px;
+	border-radius: 15px;
+	overflow: hidden;
+	
+	img, video
+	{
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
+		outline: none;
+	}
+	
+	@include margin-x( );
+}
+
+.mediaRow:hover
+{
+	.mediaRow__tile-overlay
+	{
+		display: flex;
+	}
+}
+
+.mediaRow__tile-overlay
+{
+	display: none;
+	align-items: center;
+	justify-content: space-between;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	padding: 0.35rem 0.35rem;
+}
+
+.mediaRow__tile-button
+{
+	bottom: 0;
+	right: 0;
+	height: 50px;
+	width: 50px;
+	border: none;
+	border-radius: 10px;
+	background-color: #ca3d3d;
+	color: #ccc;
+	
+	&:focus
+	{
+		outline: none;
+	}
+	
+	svg
+	{
+		font-size: 2rem;
+		color: #fff;
+	}
+}
+
+.mediaRow__tile-button:hover
+{
+	background-color: #d36464;
+}
+
+.mediaRow__tile-text
+{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 125px;
+	height: 50px;
+	font-weight: 700;
+	font-size: 0.75rem;
+	text-transform: uppercase;
+	color: $white;
+	background-color: $black;
+	border-radius: 10px;
+}
